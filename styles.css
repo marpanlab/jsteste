@@ -1,0 +1,177 @@
+body {
+  font-family: 'Press Start 2P', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #545454;
+
+}
+
+@keyframes bgScroll {
+  0% {
+    background-position : 0px 0px;
+  }
+  100% {
+    background-position : -2400px 0px;
+  }
+  }
+
+#head {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+}
+
+#head p {
+  font-size: 10px;
+  font-family: 'Press Start 2P', sans-serif;
+}
+
+#start-game {
+  font-size: 10px;
+  margin-top: 50px;
+  text-align: center;
+  line-height: 20px;
+}
+
+#main {
+  font-size: 9px;
+  justify-items:center;
+  color: #545454;
+  display: grid;
+  margin-top: 20px;
+}
+
+#main-play-area {
+    width: 600px;
+    height: 150px;
+    background-image: url('images/background.png');
+    animation: bgScroll 300s linear infinite;
+    position: relative;
+    opacity: 1;
+    transition: 15 ease;
+  }
+  
+  #background {
+    width: 600px;
+    height: 150px;
+    animation: bgScroll 300s linear infinite;
+    position: absolute;
+    opacity: 1;
+    transition: 1s ease-in;
+  }
+
+  #background.hidden {
+    width: 600px;
+    height: 150px;
+    position: absolute;
+    opacity: 0;
+    transition: 1s ease-in;
+  }
+
+  #instructions-text img {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    color: #545454;
+    left: 485px;
+    display: flex;
+  }
+  
+  #start-button {
+    font-size: 20px;
+    position: absolute;
+    color: white;
+    left: 200px;
+    top: 30px;
+    text-shadow: 2px 2px #545454;
+  }
+
+  #restart-button {
+    font-size: 20px;
+    position: absolute;
+    color: white;
+    left: 235px;
+    top: 50px;
+    text-shadow: 2px 2px #545454;
+    display: none;
+  }
+  
+  #start-button:hover {
+    cursor: pointer;
+  }
+  
+  #restart-button:hover {
+    cursor: pointer;
+  }
+
+  #player-controlled-shooter {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: 20px;
+    top: 60px;
+  }
+  
+#score {
+  color: #545454;
+  font-size: 12px;
+  display: none;
+}
+
+#over {
+  font-size: 10px;
+  color: #545454;
+  margin-left: 150px;
+  margin-top: -5px;
+  text-align: center;
+
+}
+
+  .laser {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+  }
+  
+  .monster {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+  }
+  
+  .monster-transition {
+    opacity: 1;
+    transition: opacity 1.5s ease-in;
+  }
+  
+
+  .dead-monster {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    opacity: 0;
+  }
+
+  .dead-laser {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    opacity: 0;
+  }
+
+  #footer {
+    margin-top: 80px;
+    justify-content: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    text-align: -webkit-center;
+  }
+
+  #test {
+    width: 600px;
+    align-items: flex-end;
+    text-align: left;
+    line-height: 30px
+  }
